@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest",
-    "release": "standard-version"
+    "release": "standard-version",
+    "format": "prettier --write \"src/**/*.{js,css,jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "dev": "parcel src/index.html"
   },
   "repository": {
     "type": "git",
@@ -21,13 +24,35 @@
     "url": "https://github.com/wroughtec/movie-search/issues"
   },
   "homepage": "https://github.com/wroughtec/movie-search#readme",
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.jsx$": "babel-jest",
+      "^.+\\.js$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "coveragePathIgnorePatterns": [
+      "./public/",
+      "./node_modules/"
+    ],
+    "setupFiles": [
+      "./setupTests.js"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.1.0",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-syntax-flow": "^7.0.0",
+    "@babel/plugin-transform-react-jsx": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-0",
     "babel-eslint": "^9.0.0",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-module-resolver": "^3.1.1",
     "cross-env": "^5.2.0",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
@@ -35,6 +60,8 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-config-react": "^1.1.7",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-env": "^0.0.3",
     "eslint-plugin-flow": "^2.29.1",
     "eslint-plugin-flowtype": "^2.50.1",
     "eslint-plugin-import": "^2.14.0",
@@ -43,7 +70,7 @@
     "eslint-plugin-react": "^7.11.1",
     "flow-bin": "^0.81.0",
     "jest": "^23.6.0",
-    "parcel-bundler": "^1.9.7",
+    "parcel-bundler": "^1.10.0-beta.1",
     "standard-version": "^4.4.0",
     "stylelint": "^9.5.0",
     "stylelint-config-prettier": "^4.0.0",

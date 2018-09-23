@@ -1,15 +1,37 @@
 {
   "presets": [
-    "react",
-    "preset-flow",
     [
-      "env",
+      "@babel/env",
       {
         "targets": {
           "browsers": ["last 2 versions"]
         }
       }
-    ]
+    ],
+    "@babel/preset-flow",
+    "@babel/react"
   ],
-  "plugins": ["transform-class-properties"]
+  "plugins": [
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+  ],
+  "@babel/plugin-syntax-flow",
+  "@babel/plugin-transform-react-jsx",
+  [
+    "module-resolver",
+    {
+      "root": [
+        "./src"
+      ],
+      "alias": {
+        "app": "./",
+        "components": "./src/components",
+        "consts": "./src/consts",
+        "utils": "./src/utils"
+      }
+    }
+  ]]
 }

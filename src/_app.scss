@@ -1,7 +1,41 @@
+@import '../node_modules/normalize.css/normalize.css';
+
 :root {
   --textColor: #333;
+  --searchBackground: #222;
+  --searchText: #fff;
   --linkColor: #3488b2;
   --spinnerBase: #385a6b;
   --spinnerContrast: #df7b30;
   --spinnerGo: #006608;
+  --inputBackground: #EDF4FC;
+  --inputBorder: #C4C7CF;
+  --btnText: #fff;
+  --btnBackground: #007bff;
+  --btnHoverBackground: #0069d9;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  overflow-x: hidden;
+
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: var(--textColor);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }

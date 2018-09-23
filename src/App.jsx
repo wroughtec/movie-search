@@ -1,21 +1,33 @@
 // @flow
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { produce } from 'immer';
 import RequestMovies from './utils/requestMovies';
-import { Spinner } from './components/Spinner/Spinner';
 import './_app.scss';
+import { Provider } from './components/SearchContext/SearchContext';
+import { ResultsWrapper } from './components/Results/ResultsWrapper';
+import { SearchBox } from './components/SearchBox/SearchBox';
 
 type State = {
   loading: boolean,
-  config: any
+  config: any,
+  searchTerms: string,
+  searchResults: any
 };
 export class App extends Component<void, State> {
-  state = {
-    loading: true,
-    config: {}
-  };
+  constructor(props) {
+    super(props);
 
-  async componentDidMount() {
+    this.state = {
+      loading: true,
+      config: {},
+      searchTerms: '',
+      searchResults: {},
+      handleSearchChange: this.handleSearchChange,
+      handleMovieSubmit: this.handleMovieSubmit
+    };
+  }
+
+  componentDidMount() {
     this.addConfigToState();
   }
 
@@ -30,13 +42,44 @@ export class App extends Component<void, State> {
     );
   };
 
+  handleSearchChange = (event: SyntheticEvent<HTMLButtonElement>) => {
+    this.setState(
+      produce(this.state, draft => {
+        draft.searchTerms = event.target.value;
+      })
+    );
+  };
+
+  handleMovieSubmit = (event: SyntheticEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+
+    this.setState(
+      produce(this.state, draft => {
+        draft.loading = true;
+      }),
+      this.searchForMovies
+    );
+  };
+
+  searchForMovies = async () => {
+    const { searchTerms } = this.state,
+      query = { query: searchTerms },
+      searchResults = await RequestMovies.searchMovies(query);
+
+    this.setState(
+      produce(this.state, draft => {
+        draft.searchResults = searchResults;
+        draft.loading = false;
+      })
+    );
+  };
+
   render() {
-    const { loading } = this.state;
     return (
-      <Fragment>
-        {loading && <Spinner />}
-        {!loading && <div>Rendered</div>}
-      </Fragment>
+      <Provider value={this.state}>
+        <SearchBox />
+        <ResultsWrapper />
+      </Provider>
     );
   }
 }

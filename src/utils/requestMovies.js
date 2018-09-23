@@ -1,6 +1,6 @@
 // @flow
 import { asyncFetch } from './asyncFetch';
-import { searchEndpoint, configEndpoint } from '../consts/apiEndpoints';
+import { searchEndpoint, configEndpoint, genresEndpoint } from '../consts/apiEndpoints';
 
 type SearchParamProps = {
   [key: string]: string
@@ -8,6 +8,8 @@ type SearchParamProps = {
 
 class RequestMovies {
   config = () => asyncFetch(configEndpoint);
+
+  getGenres = () => asyncFetch(genresEndpoint);
 
   searchMovies = (searchParams: SearchParamProps) => asyncFetch(searchEndpoint, searchParams);
 

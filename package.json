@@ -1,0 +1,58 @@
+{
+  "name": "movie-search",
+  "version": "0.0.1",
+  "description": "Search the movie db using React",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test jest",
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wroughtec/movie-search.git"
+  },
+  "keywords": [
+    "React",
+    "movies"
+  ],
+  "author": "William Corry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wroughtec/movie-search/issues"
+  },
+  "homepage": "https://github.com/wroughtec/movie-search#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^9.0.0",
+    "cross-env": "^5.2.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-flow": "^2.29.1",
+    "eslint-plugin-flowtype": "^2.50.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
+    "flow-bin": "^0.81.0",
+    "jest": "^23.6.0",
+    "parcel-bundler": "^1.9.7",
+    "standard-version": "^4.4.0",
+    "stylelint": "^9.5.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-no-browser-hacks": "^1.2.1",
+    "stylelint-no-unsupported-browser-features": "^3.0.1",
+    "stylelint-order": "^1.0.0"
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}

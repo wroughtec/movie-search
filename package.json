@@ -1,6 +1,6 @@
 {
   "name": "movie-search",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Search the movie db using React",
   "main": "index.js",
   "scripts": {

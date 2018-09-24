@@ -1,6 +1,12 @@
-import { BASE_URL, KEY } from '../consts/envVars';
+// @flow
 
-export const asyncFetch = async (endpoint, params) => {
+import { BASE_URL, KEY } from 'consts/envVars';
+
+type ParamProps = {
+  [key: string]: string
+};
+
+export const asyncFetch = async (endpoint: string, params: ParamProps) => {
   let searchParams = '';
 
   if (params) {
@@ -10,13 +16,12 @@ export const asyncFetch = async (endpoint, params) => {
       .join('&');
   }
 
-  const url = `${BASE_URL}${endpoint}?api_key=${KEY}${searchParams}`,
+  const url = `${BASE_URL}/${endpoint}?api_key=${KEY}${searchParams}`,
     options = {
       method: 'GET',
       'Content-Type': 'application/json',
       dataType: 'jsonp'
     };
-
   try {
     const response = await fetch(url, options);
 

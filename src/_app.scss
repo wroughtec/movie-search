@@ -1,3 +1,4 @@
+// Third party libs
 @import '../node_modules/normalize.css/normalize.css';
 
 :root {
@@ -8,11 +9,14 @@
   --spinnerBase: #385a6b;
   --spinnerContrast: #df7b30;
   --spinnerGo: #006608;
-  --inputBackground: #EDF4FC;
-  --inputBorder: #C4C7CF;
+  --inputBackground: #edf4fc;
+  --inputBorder: #c4c7cf;
   --btnText: #fff;
   --btnBackground: #007bff;
   --btnHoverBackground: #0069d9;
+  --tagBaseColour: #e0e0e0;
+  --navBackground: #1c293f;
+  --navLinks: #fff;
 }
 
 html {

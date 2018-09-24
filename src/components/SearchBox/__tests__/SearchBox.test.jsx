@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SearchBox } from '../SearchBox';
+import { SearchBox } from 'components/SearchBox/SearchBox';
 
 describe('SearchBox', () => {
   test('Renders', () => {

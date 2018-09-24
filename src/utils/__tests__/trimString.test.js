@@ -1,4 +1,4 @@
-import { trimString } from '../trimString';
+import { trimString } from 'utils/trimString';
 
 describe(`trimString`, () => {
   test(`trims string and adds ...`, () => {

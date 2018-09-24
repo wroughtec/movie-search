@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { Consumer } from '../SearchContext/SearchContext';
+import { Consumer } from 'components/SearchContext/SearchContext';
 import './_c-search-box.scss';
 
 export const SearchBox = () => (

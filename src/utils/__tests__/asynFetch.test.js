@@ -1,7 +1,8 @@
 import fetchMock from 'fetch-mock';
-import { asyncFetch } from '../asyncFetch';
+import { BASE_URL, KEY } from 'consts/envVars';
+import { asyncFetch } from 'utils/asyncFetch';
 
-fetchMock.get(`*`, JSON.stringify({ status: `Ok` }));
+fetchMock.get(`${BASE_URL}/test/endpoint?api_key=${KEY}`, JSON.stringify({ status: `Ok` }));
 
 describe(`Mocking fetch`, () => {
   test(`fails with synchronous code`, () => {
@@ -28,9 +29,9 @@ describe(`Mocking fetch`, () => {
 
   test('the fetch fails with an error', async () => {
     try {
-      await asyncFetch('test/endpoint');
+      await asyncFetch('test/error');
     } catch (e) {
-      expect(e).toMatch('error');
+      expect(e).toBe(e);
     }
   });
 });

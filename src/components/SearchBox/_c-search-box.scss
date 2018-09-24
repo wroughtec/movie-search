@@ -1,7 +1,8 @@
+@import '../../scss/_mixins/m-container';
+
 .c-search-box {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  margin-bottom: 5vw;
 
   color: var(--searchText);
 
@@ -9,11 +10,7 @@
 }
 
 .c-search-box__form {
-  max-width: 90vw;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin-right: auto;
-  margin-left: auto;
+  @include container;
 }
 
 .c-search-box__label {
@@ -64,9 +61,7 @@
   border-color: var(--btnBackground);
   border-radius: .5rem;
 
-  transition: color var(--animationSpeed),
-    background-color var(--animationSpeed),
-    border-color var(--animationSpeed),
+  transition: color var(--animationSpeed), background-color var(--animationSpeed), border-color var(--animationSpeed),
     box-shadow var(--animationSpeed);
 
   &:focus {

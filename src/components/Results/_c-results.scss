@@ -1,9 +1,7 @@
+@import '../../scss/_mixins/m-container';
+
 .c-results {
-  max-width: 90vw;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin-right: auto;
-  margin-left: auto;
+  @include container;
 }
 
 .c-results__container {

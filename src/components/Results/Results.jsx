@@ -1,34 +1,57 @@
 // @flow
 
 import React, { Component } from 'react';
-import { Spinner } from '../Spinner/Spinner';
-import { Card } from '../Card/Card';
+import { Spinner } from 'components/Spinner/Spinner';
+import { Card } from 'components/Card/Card';
 import './_c-results.scss';
 
-export class Results extends Component {
+type Props = {
+  searchParams: SearchContextType,
+  searchTerm?: ?string
+};
+export class Results extends Component<Props> {
+  static defaultProps = {
+    searchTerm: ''
+  };
+
+  async componentDidMount() {
+    const {
+      searchTerm,
+      searchParams: { updateSearchTerms, loadMovies }
+    } = this.props;
+
+    if (searchTerm) {
+      await updateSearchTerms(searchTerm);
+      loadMovies();
+    }
+  }
+
   displayCards = () => {
-    const { searchParams } = this.props,
-      { searchResults, imageBaseUrl, lg } = searchParams;
+    const { searchParams, popular } = this.props,
+      { searchResults, imageBaseUrl, popularResults, lg } = searchParams;
 
-    let cards = null;
+    let cards = <div className="c-results__no-results">No results</div>,
+      movieResults = searchResults;
 
-    if (searchResults && searchResults.results) {
-      if (searchResults.results.length) {
-        cards = searchResults.results.map(card => {
-          const { title, id, release_date: releaseDate, poster_path: posterPath, overview } = card;
-          return (
-            <Card
-              key={id}
-              title={title}
-              releaseDate={releaseDate}
-              overview={overview}
-              path={posterPath}
-              imageBaseUrl={imageBaseUrl}
-              size={lg}
-            />
-          );
-        });
-      }
+    if (popular) {
+      movieResults = popularResults;
+    }
+    if (movieResults && movieResults.results && movieResults.results.length) {
+      cards = movieResults.results.map(card => {
+        const { title, id, release_date: releaseDate, poster_path: posterPath, overview, genre_ids: genreIds } = card;
+        return (
+          <Card
+            key={id}
+            title={title}
+            releaseDate={releaseDate}
+            overview={overview}
+            path={posterPath}
+            imageBaseUrl={imageBaseUrl}
+            size={lg}
+            genreIds={genreIds}
+          />
+        );
+      });
     }
 
     return cards;

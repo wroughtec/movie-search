@@ -1,8 +1,8 @@
 // @flow
 
 import React from 'react';
-import { Icon } from '../Icon/Icon';
-import { spinnerIcon } from '../../consts/iconIds';
+import { Icon } from 'components/Icon/Icon';
+import { spinnerIcon } from 'consts/iconIds';
 import './_c-spinner.scss';
 
 export const Spinner = () => (

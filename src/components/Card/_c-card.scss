@@ -7,6 +7,8 @@
 }
 
 .c-card__header {
+  margin-bottom: .75rem;
+
   font-weight: 700;
 }
 
@@ -15,4 +17,14 @@
   margin-bottom: 0;
 
   font-size: 1.25rem;
+}
+
+.c-card__body {
+  width: 100%;
+}
+
+.c-card__overview {
+  margin-top: 0;
+
+  font-size: .85rem;
 }

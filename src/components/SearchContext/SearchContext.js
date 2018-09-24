@@ -1,5 +1,7 @@
+// @flow
+
 import { createContext } from 'react';
-import { searchContext } from '../../consts/searchContext';
+import { searchContext } from 'consts/searchContext';
 
 const SearchContext = createContext({
   ...searchContext

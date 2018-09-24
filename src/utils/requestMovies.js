@@ -1,19 +1,28 @@
 // @flow
-import { asyncFetch } from './asyncFetch';
-import { searchEndpoint, configEndpoint, genresEndpoint } from '../consts/apiEndpoints';
-
-type SearchParamProps = {
-  [key: string]: string
-};
+import { searchEndpoint, configEndpoint, genresEndpoint, popularEndpoint } from 'consts/apiEndpoints';
+import { asyncFetch } from 'utils/asyncFetch';
 
 class RequestMovies {
   config = () => asyncFetch(configEndpoint);
 
   getGenres = () => asyncFetch(genresEndpoint);
 
-  searchMovies = (searchParams: SearchParamProps) => asyncFetch(searchEndpoint, searchParams);
+  searchMovies = (searchText: string, pageNo?: number = 1) => {
+    const searchParams = {
+      query: searchText,
+      page: pageNo.toString()
+    };
 
-  popularMovies = () => {};
+    return asyncFetch(searchEndpoint, searchParams);
+  };
+
+  popularMovies = (pageNo?: number = 1) => {
+    const params = {
+      page: pageNo.toString()
+    };
+
+    return asyncFetch(popularEndpoint, params);
+  };
 }
 
 export default new RequestMovies();

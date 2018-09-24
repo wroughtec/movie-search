@@ -30,13 +30,14 @@
     "module-resolver",
     {
       "root": [
-        "./src"
+        "./"
       ],
       "alias": {
-        "app": "./",
+        "app": "./src",
         "components": "./src/components",
         "consts": "./src/consts",
-        "utils": "./src/utils"
+        "utils": "./src/utils",
+        "mocks": "./src/__mocks__"
       }
     }
   ]]

@@ -7,6 +7,7 @@ fetchMock.get(`${BASE_URL}/${configEndpoint}?api_key=${KEY}`, JSON.stringify({ s
 fetchMock.get(`${BASE_URL}/${genresEndpoint}?api_key=${KEY}`, JSON.stringify({ status: `Genres` }));
 fetchMock.get(`${BASE_URL}/${searchEndpoint}?api_key=${KEY}`, JSON.stringify({ status: `Search` }));
 fetchMock.get(`${BASE_URL}/${popularEndpoint}?api_key=${KEY}`, JSON.stringify({ status: `Popular` }));
+fetchMock.get(`${BASE_URL}/movie/11?api_key=${KEY}`, JSON.stringify({ status: `Details` }));
 
 describe(`requestMovies`, () => {
   test(`config`, async () => {
@@ -22,6 +23,7 @@ describe(`requestMovies`, () => {
     expect(responseJson).not.toHaveProperty(`status`, `Config`);
     expect(responseJson).not.toHaveProperty(`status`, `Search`);
     expect(responseJson).not.toHaveProperty(`status`, `Popular`);
+    expect(responseJson).not.toHaveProperty(`status`, `Details`);
     expect(responseJson).toHaveProperty(`status`, `Genres`);
   });
 
@@ -30,6 +32,7 @@ describe(`requestMovies`, () => {
     expect(responseJson).not.toHaveProperty(`status`, `Config`);
     expect(responseJson).not.toHaveProperty(`status`, `Genres`);
     expect(responseJson).not.toHaveProperty(`status`, `Popular`);
+    expect(responseJson).not.toHaveProperty(`status`, `Details`);
     expect(responseJson).toHaveProperty(`status`, `Search`);
   });
 
@@ -44,6 +47,16 @@ describe(`requestMovies`, () => {
     expect(responseJson).not.toHaveProperty(`status`, `Config`);
     expect(responseJson).not.toHaveProperty(`status`, `Genres`);
     expect(responseJson).not.toHaveProperty(`status`, `Search`);
+    expect(responseJson).not.toHaveProperty(`status`, `Details`);
     expect(responseJson).toHaveProperty(`status`, `Popular`);
+  });
+
+  test(`movieDetails`, async () => {
+    const responseJson = await requestMovies.movieDetails('11');
+    expect(responseJson).not.toHaveProperty(`status`, `Config`);
+    expect(responseJson).not.toHaveProperty(`status`, `Genres`);
+    expect(responseJson).not.toHaveProperty(`status`, `Search`);
+    expect(responseJson).not.toHaveProperty(`status`, `Popular`);
+    expect(responseJson).toHaveProperty(`status`, `Details`);
   });
 });

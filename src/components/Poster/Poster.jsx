@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { produce } from 'immer';
-import { Spinner } from '../Spinner/Spinner';
+import { Spinner } from 'components/Spinner/Spinner';
 
 type Props = {
   imageBaseUrl: string,
@@ -40,18 +40,37 @@ export class Poster extends Component<Props, State> {
 
     return (
       <div className="c-poster">
-        {!imgLoaded && !imgError && <Spinner />}
-        {!imgError ? (
-          <img
-            onLoad={this.handleImageLoad}
-            onError={this.handleImageError}
-            className="c-poster__img"
-            src={`${imageBaseUrl}${size}${path}`}
-            alt={title}
-          />
-        ) : (
-          <div className="c-poster__error">broken_image</div>
+        {!imgLoaded && !imgError && path && <Spinner />}
+        {!path && (
+          // @TODO handle placeholder sizes and icons
+          <div className="c-poster__no-img">
+            <img
+              className="c-poster__img"
+              src="https://via.placeholder.com/300x444/6ea9c0/ffffff"
+              alt="poster missing"
+            />
+          </div>
         )}
+        {imgError &&
+          path && (
+            <div className="c-poster__error">
+              <img
+                className="c-poster__img"
+                src="https://via.placeholder.com/300x444/e8117f/ffffff"
+                alt="poster broken"
+              />
+            </div>
+          )}
+        {!imgError &&
+          path && (
+            <img
+              onLoad={this.handleImageLoad}
+              onError={this.handleImageError}
+              className="c-poster__img"
+              src={`${imageBaseUrl}${size}${path}`}
+              alt={title}
+            />
+          )}
       </div>
     );
   }

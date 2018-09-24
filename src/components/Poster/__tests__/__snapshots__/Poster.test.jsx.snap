@@ -24,6 +24,8 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Spinner />,
+        false,
+        false,
         <img
           alt="Title"
           className="c-poster__img"
@@ -45,6 +47,8 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      false,
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -71,6 +75,8 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Spinner />,
+          false,
+          false,
           <img
             alt="Title"
             className="c-poster__img"
@@ -92,6 +98,8 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
+        false,
+        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -107,6 +115,161 @@ ShallowWrapper {
           "rendered": null,
           "type": "img",
         },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`Poster no path 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Poster
+    imageBaseUrl="imageBaseUrl"
+    path=""
+    size="size"
+    title="Title"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        false,
+        <div
+          className="c-poster__no-img"
+        >
+          <img
+            alt="poster missing"
+            className="c-poster__img"
+            src="https://via.placeholder.com/300x444/6ea9c0/ffffff"
+          />
+        </div>,
+        "",
+        false,
+      ],
+      "className": "c-poster",
+    },
+    "ref": null,
+    "rendered": Array [
+      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <img
+            alt="poster missing"
+            className="c-poster__img"
+            src="https://via.placeholder.com/300x444/6ea9c0/ffffff"
+          />,
+          "className": "c-poster__no-img",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "poster missing",
+            "className": "c-poster__img",
+            "src": "https://via.placeholder.com/300x444/6ea9c0/ffffff",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        "type": "div",
+      },
+      "",
+      false,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          false,
+          <div
+            className="c-poster__no-img"
+          >
+            <img
+              alt="poster missing"
+              className="c-poster__img"
+              src="https://via.placeholder.com/300x444/6ea9c0/ffffff"
+            />
+          </div>,
+          "",
+          false,
+        ],
+        "className": "c-poster",
+      },
+      "ref": null,
+      "rendered": Array [
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <img
+              alt="poster missing"
+              className="c-poster__img"
+              src="https://via.placeholder.com/300x444/6ea9c0/ffffff"
+            />,
+            "className": "c-poster__no-img",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "poster missing",
+              "className": "c-poster__img",
+              "src": "https://via.placeholder.com/300x444/6ea9c0/ffffff",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": "div",
+        },
+        "",
+        false,
       ],
       "type": "div",
     },

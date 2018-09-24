@@ -19,18 +19,35 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <SearchBox />,
-        <ResultsWrapper />,
+        <Nav
+          resetSearchTerm={[Function]}
+        />,
+        <Router>
+          <ResultsWrapper
+            path="/"
+            popular={true}
+          />
+          <ResultsWrapper
+            path="/search/:searchTerm"
+          />
+        </Router>,
       ],
       "value": Object {
+        "genres": Array [],
         "handleMovieSubmit": [Function],
         "handleSearchChange": [Function],
         "imageBaseUrl": "",
         "lg": "",
+        "loadMovies": [Function],
         "loading": true,
         "md": "",
+        "popularPageNo": 1,
+        "popularResults": Object {},
+        "searchPageNo": 1,
         "searchResults": Object {},
         "searchTerms": "",
         "sm": "",
+        "updateSearchTerms": [Function],
         "xl": "",
       },
     },
@@ -49,9 +66,54 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "resetSearchTerm": [Function],
+        },
         "ref": null,
         "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <ResultsWrapper
+              path="/"
+              popular={true}
+            />,
+            <ResultsWrapper
+              path="/search/:searchTerm"
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "path": "/",
+              "popular": true,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "path": "/search/:searchTerm",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
     ],
@@ -65,27 +127,37 @@ ShallowWrapper {
         "_currentRenderer": Object {},
         "_currentRenderer2": null,
         "_currentValue": Object {
+          "genres": Array [],
           "handleMovieSubmit": [Function],
           "handleSearchChange": [Function],
           "imageBaseUrl": "",
           "lg": "",
           "loading": true,
           "md": "",
+          "popularPageNo": 1,
+          "popularResults": Object {},
+          "searchPageNo": 1,
           "searchResults": Object {},
           "searchTerms": "",
           "sm": "",
+          "updateSearchTerms": [Function],
           "xl": "",
         },
         "_currentValue2": Object {
+          "genres": Array [],
           "handleMovieSubmit": [Function],
           "handleSearchChange": [Function],
           "imageBaseUrl": "",
           "lg": "",
           "loading": true,
           "md": "",
+          "popularPageNo": 1,
+          "popularResults": Object {},
+          "searchPageNo": 1,
           "searchResults": Object {},
           "searchTerms": "",
           "sm": "",
+          "updateSearchTerms": [Function],
           "xl": "",
         },
         "unstable_read": [Function],
@@ -100,18 +172,35 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <SearchBox />,
-          <ResultsWrapper />,
+          <Nav
+            resetSearchTerm={[Function]}
+          />,
+          <Router>
+            <ResultsWrapper
+              path="/"
+              popular={true}
+            />
+            <ResultsWrapper
+              path="/search/:searchTerm"
+            />
+          </Router>,
         ],
         "value": Object {
+          "genres": Array [],
           "handleMovieSubmit": [Function],
           "handleSearchChange": [Function],
           "imageBaseUrl": "",
           "lg": "",
+          "loadMovies": [Function],
           "loading": true,
           "md": "",
+          "popularPageNo": 1,
+          "popularResults": Object {},
+          "searchPageNo": 1,
           "searchResults": Object {},
           "searchTerms": "",
           "sm": "",
+          "updateSearchTerms": [Function],
           "xl": "",
         },
       },
@@ -130,9 +219,54 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "resetSearchTerm": [Function],
+          },
           "ref": null,
           "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <ResultsWrapper
+                path="/"
+                popular={true}
+              />,
+              <ResultsWrapper
+                path="/search/:searchTerm"
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "path": "/",
+                "popular": true,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "path": "/search/:searchTerm",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
       ],
@@ -146,27 +280,37 @@ ShallowWrapper {
           "_currentRenderer": Object {},
           "_currentRenderer2": null,
           "_currentValue": Object {
+            "genres": Array [],
             "handleMovieSubmit": [Function],
             "handleSearchChange": [Function],
             "imageBaseUrl": "",
             "lg": "",
             "loading": true,
             "md": "",
+            "popularPageNo": 1,
+            "popularResults": Object {},
+            "searchPageNo": 1,
             "searchResults": Object {},
             "searchTerms": "",
             "sm": "",
+            "updateSearchTerms": [Function],
             "xl": "",
           },
           "_currentValue2": Object {
+            "genres": Array [],
             "handleMovieSubmit": [Function],
             "handleSearchChange": [Function],
             "imageBaseUrl": "",
             "lg": "",
             "loading": true,
             "md": "",
+            "popularPageNo": 1,
+            "popularResults": Object {},
+            "searchPageNo": 1,
             "searchResults": Object {},
             "searchTerms": "",
             "sm": "",
+            "updateSearchTerms": [Function],
             "xl": "",
           },
           "unstable_read": [Function],

@@ -53,6 +53,7 @@ ShallowWrapper {
           >
             overview
           </p>
+          <GenreTagsWrapper />
         </div>,
       ],
       "className": "c-card",
@@ -98,6 +99,7 @@ ShallowWrapper {
             >
               overview
             </p>,
+            <GenreTagsWrapper />,
           ],
           "className": "c-card__body",
         },
@@ -163,6 +165,17 @@ ShallowWrapper {
             "rendered": "overview",
             "type": "p",
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "genreIds": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
         ],
         "type": "div",
       },
@@ -204,6 +217,7 @@ ShallowWrapper {
             >
               overview
             </p>
+            <GenreTagsWrapper />
           </div>,
         ],
         "className": "c-card",
@@ -249,6 +263,7 @@ ShallowWrapper {
               >
                 overview
               </p>,
+              <GenreTagsWrapper />,
             ],
             "className": "c-card__body",
           },
@@ -313,6 +328,17 @@ ShallowWrapper {
               "ref": null,
               "rendered": "overview",
               "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "genreIds": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
           ],
           "type": "div",

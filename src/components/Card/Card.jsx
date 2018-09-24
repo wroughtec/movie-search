@@ -1,9 +1,22 @@
-import React from 'react';
-import { Poster } from '../Poster/Poster';
-import './_c-card.scss';
-import { trimString } from '../../utils/trimString';
+// @flow
 
-export const Card = ({ title, imageBaseUrl, size, path, overview, releaseDate }) => {
+import React from 'react';
+import { Poster } from 'components/Poster/Poster';
+import { trimString } from 'utils/trimString';
+import { GenreTagsWrapper } from 'components/GenreTags/GenreTagsWrapper';
+import './_c-card.scss';
+
+type Props = {
+  title: string,
+  imageBaseUrl: string,
+  size: string,
+  path: string,
+  overview: string,
+  releaseDate: string,
+  genreIds: number[]
+};
+
+export const Card = ({ title, imageBaseUrl, size, path, overview, releaseDate, genreIds }: Props) => {
   const trimmedOverview = trimString(overview);
   return (
     <article className="c-card">
@@ -14,6 +27,7 @@ export const Card = ({ title, imageBaseUrl, size, path, overview, releaseDate })
           <small className="c-card__date">{releaseDate}</small>
         </header>
         <p className="c-card__overview">{trimmedOverview}</p>
+        <GenreTagsWrapper genreIds={genreIds} />
       </div>
     </article>
   );

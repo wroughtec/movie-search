@@ -1,0 +1,24 @@
+.c-genre-tags {
+  display: flex;
+  margin-bottom: .75rem;
+
+  flex-wrap: wrap;
+}
+
+.c-genre-tags__tag {
+  display: flex;
+  height: 1.5rem;
+  padding-right: .75rem;
+  padding-left: .75rem;
+  margin: .25rem;
+
+  align-items: center;
+
+  font-size: .65rem;
+  white-space: nowrap;
+
+  user-select: none;
+
+  background-color: var(--tagBaseColour);
+  border-radius: 1rem;
+}

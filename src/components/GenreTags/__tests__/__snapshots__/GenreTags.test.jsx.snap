@@ -1,0 +1,432 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GenreTags Renders 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <GenreTags
+    genreIds={
+      Array [
+        12,
+        28,
+        878,
+      ]
+    }
+    genres={
+      Array [
+        Object {
+          "id": 28,
+          "name": "Action",
+        },
+        Object {
+          "id": 12,
+          "name": "Adventure",
+        },
+        Object {
+          "id": 878,
+          "name": "Science Fiction",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <span
+          className="c-genre-tags__tag c-genre-tags__tag--12"
+        >
+          Adventure
+        </span>,
+        <span
+          className="c-genre-tags__tag c-genre-tags__tag--28"
+        >
+          Action
+        </span>,
+        <span
+          className="c-genre-tags__tag c-genre-tags__tag--878"
+        >
+          Science Fiction
+        </span>,
+      ],
+      "className": "c-genre-tags",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "12",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Adventure",
+          "className": "c-genre-tags__tag c-genre-tags__tag--12",
+        },
+        "ref": null,
+        "rendered": "Adventure",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": "28",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Action",
+          "className": "c-genre-tags__tag c-genre-tags__tag--28",
+        },
+        "ref": null,
+        "rendered": "Action",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": "878",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Science Fiction",
+          "className": "c-genre-tags__tag c-genre-tags__tag--878",
+        },
+        "ref": null,
+        "rendered": "Science Fiction",
+        "type": "span",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <span
+            className="c-genre-tags__tag c-genre-tags__tag--12"
+          >
+            Adventure
+          </span>,
+          <span
+            className="c-genre-tags__tag c-genre-tags__tag--28"
+          >
+            Action
+          </span>,
+          <span
+            className="c-genre-tags__tag c-genre-tags__tag--878"
+          >
+            Science Fiction
+          </span>,
+        ],
+        "className": "c-genre-tags",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "12",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Adventure",
+            "className": "c-genre-tags__tag c-genre-tags__tag--12",
+          },
+          "ref": null,
+          "rendered": "Adventure",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": "28",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Action",
+            "className": "c-genre-tags__tag c-genre-tags__tag--28",
+          },
+          "ref": null,
+          "rendered": "Action",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": "878",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Science Fiction",
+            "className": "c-genre-tags__tag c-genre-tags__tag--878",
+          },
+          "ref": null,
+          "rendered": "Science Fiction",
+          "type": "span",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`GenreTags no genres 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <GenreTags
+    genreIds={
+      Array [
+        12,
+        28,
+        878,
+      ]
+    }
+    genres={Array []}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "No genres",
+      "className": "c-genre-tags",
+    },
+    "ref": null,
+    "rendered": "No genres",
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "No genres",
+        "className": "c-genre-tags",
+      },
+      "ref": null,
+      "rendered": "No genres",
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`GenreTags wrapper renders 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <GenreTagsWrapper
+    genreIds={
+      Array [
+        12,
+        28,
+        878,
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": [Function],
+    },
+    "ref": null,
+    "rendered": [Function],
+    "type": Object {
+      "$$typeof": Symbol(react.context),
+      "Consumer": [Circular],
+      "Provider": Object {
+        "$$typeof": Symbol(react.provider),
+        "_context": [Circular],
+      },
+      "_calculateChangedBits": null,
+      "_currentRenderer": null,
+      "_currentRenderer2": null,
+      "_currentValue": Object {
+        "genres": Array [],
+        "handleMovieSubmit": [Function],
+        "handleSearchChange": [Function],
+        "imageBaseUrl": "",
+        "lg": "",
+        "loading": true,
+        "md": "",
+        "popularPageNo": 1,
+        "popularResults": Object {},
+        "searchPageNo": 1,
+        "searchResults": Object {},
+        "searchTerms": "",
+        "sm": "",
+        "updateSearchTerms": [Function],
+        "xl": "",
+      },
+      "_currentValue2": Object {
+        "genres": Array [],
+        "handleMovieSubmit": [Function],
+        "handleSearchChange": [Function],
+        "imageBaseUrl": "",
+        "lg": "",
+        "loading": true,
+        "md": "",
+        "popularPageNo": 1,
+        "popularResults": Object {},
+        "searchPageNo": 1,
+        "searchResults": Object {},
+        "searchTerms": "",
+        "sm": "",
+        "updateSearchTerms": [Function],
+        "xl": "",
+      },
+      "unstable_read": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": [Function],
+      },
+      "ref": null,
+      "rendered": [Function],
+      "type": Object {
+        "$$typeof": Symbol(react.context),
+        "Consumer": [Circular],
+        "Provider": Object {
+          "$$typeof": Symbol(react.provider),
+          "_context": [Circular],
+        },
+        "_calculateChangedBits": null,
+        "_currentRenderer": null,
+        "_currentRenderer2": null,
+        "_currentValue": Object {
+          "genres": Array [],
+          "handleMovieSubmit": [Function],
+          "handleSearchChange": [Function],
+          "imageBaseUrl": "",
+          "lg": "",
+          "loading": true,
+          "md": "",
+          "popularPageNo": 1,
+          "popularResults": Object {},
+          "searchPageNo": 1,
+          "searchResults": Object {},
+          "searchTerms": "",
+          "sm": "",
+          "updateSearchTerms": [Function],
+          "xl": "",
+        },
+        "_currentValue2": Object {
+          "genres": Array [],
+          "handleMovieSubmit": [Function],
+          "handleSearchChange": [Function],
+          "imageBaseUrl": "",
+          "lg": "",
+          "loading": true,
+          "md": "",
+          "popularPageNo": 1,
+          "popularResults": Object {},
+          "searchPageNo": 1,
+          "searchResults": Object {},
+          "searchTerms": "",
+          "sm": "",
+          "updateSearchTerms": [Function],
+          "xl": "",
+        },
+        "unstable_read": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "context": Object {
+      "genres": Array [
+        Object {
+          "id": 28,
+          "name": "Action",
+        },
+        Object {
+          "id": 12,
+          "name": "Adventure",
+        },
+        Object {
+          "id": 878,
+          "name": "Science Fiction",
+        },
+      ],
+    },
+    "hydrateIn": undefined,
+  },
+}
+`;

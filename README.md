@@ -2,7 +2,7 @@
 Search for movies in react from the [MovieDb](https://www.themoviedb.org/)
 
 ## Requirements
-For development, you will only need Node.js installed on your environement.
+For development, you will only need Node.js installed on your environement. Only visually tested on latest version of Chrome and Firefox
 
 ### Yarn
 Recommended to use [Yarn](https://yarnpkg.com/en/docs/install#mac-stable) rather than npm as all instructions will be written with yarn.
@@ -47,6 +47,7 @@ To run the tests
 
 ---
 ## TODOS
+- Add postCss tools to help deal with older browsers
 - Add search by genre
 - Colour code each genre
 - Refactor GenreTags so can be more reusable to handle the different data structures from the different endpoints

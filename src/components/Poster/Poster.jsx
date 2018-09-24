@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { produce } from 'immer';
 import { Spinner } from 'components/Spinner/Spinner';
+import './_c-poster.scss';
 
 type Props = {
   imageBaseUrl: string,

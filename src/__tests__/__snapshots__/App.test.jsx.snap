@@ -30,6 +30,9 @@ ShallowWrapper {
           <ResultsWrapper
             path="/search/:searchTerm"
           />
+          <MovieWrapper
+            path="/movie/:movieId"
+          />
         </Router>,
       ],
       "value": Object {
@@ -86,6 +89,9 @@ ShallowWrapper {
             <ResultsWrapper
               path="/search/:searchTerm"
             />,
+            <MovieWrapper
+              path="/movie/:movieId"
+            />,
           ],
         },
         "ref": null,
@@ -108,6 +114,17 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "path": "/search/:searchTerm",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "path": "/movie/:movieId",
             },
             "ref": null,
             "rendered": null,
@@ -183,6 +200,9 @@ ShallowWrapper {
             <ResultsWrapper
               path="/search/:searchTerm"
             />
+            <MovieWrapper
+              path="/movie/:movieId"
+            />
           </Router>,
         ],
         "value": Object {
@@ -239,6 +259,9 @@ ShallowWrapper {
               <ResultsWrapper
                 path="/search/:searchTerm"
               />,
+              <MovieWrapper
+                path="/movie/:movieId"
+              />,
             ],
           },
           "ref": null,
@@ -261,6 +284,17 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "path": "/search/:searchTerm",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "path": "/movie/:movieId",
               },
               "ref": null,
               "rendered": null,

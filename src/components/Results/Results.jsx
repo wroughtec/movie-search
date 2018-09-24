@@ -49,6 +49,7 @@ export class Results extends Component<Props> {
             imageBaseUrl={imageBaseUrl}
             size={lg}
             genreIds={genreIds}
+            id={id}
           />
         );
       });

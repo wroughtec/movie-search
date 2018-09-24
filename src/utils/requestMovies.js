@@ -1,5 +1,11 @@
 // @flow
-import { searchEndpoint, configEndpoint, genresEndpoint, popularEndpoint } from 'consts/apiEndpoints';
+import {
+  searchEndpoint,
+  configEndpoint,
+  genresEndpoint,
+  popularEndpoint,
+  movieDetailsEndpoint
+} from 'consts/apiEndpoints';
 import { asyncFetch } from 'utils/asyncFetch';
 
 class RequestMovies {
@@ -23,6 +29,8 @@ class RequestMovies {
 
     return asyncFetch(popularEndpoint, params);
   };
+
+  movieDetails = (id: string) => asyncFetch(movieDetailsEndpoint(id));
 }
 
 export default new RequestMovies();

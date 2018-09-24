@@ -1,3 +1,3 @@
 export const home = '/';
-export const search = '/search/:searchTerm';
-export const movie = '/movie/:movieId';
+export const search = '/search/';
+export const movie = '/movie/';

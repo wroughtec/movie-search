@@ -1,0 +1,70 @@
+@import '../../scss/_mixins/m-container';
+
+.c-movie {
+  margin-top: -5vh;
+}
+
+.c-movie__container {
+  margin-top: 5vh;
+  margin-bottom: 5rem;
+
+  @include container;
+}
+
+.c-movie__link {
+  color: var(--btnBackground);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--btnHoverBackground);
+  }
+}
+
+.c-movie__header {
+  margin-bottom: 1rem;
+
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.c-movie__title {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 3rem;
+}
+
+.c-movie__tagline {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 1.5rem;
+}
+
+.c-movie__content {
+  display: grid;
+  margin-top: 2rem;
+
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.c-movie__meta {
+  display: grid;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+  background-color: var(--inputBackground);
+  border-radius: 1rem;
+}
+
+.c-movie__heading {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 2rem;
+  font-weight: 400;
+}

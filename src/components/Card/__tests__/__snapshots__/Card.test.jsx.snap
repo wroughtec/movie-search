@@ -25,23 +25,32 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Poster
-          imageBaseUrl="imageBaseUrl"
-          path="path"
-          size="size"
-          title="Title"
-        />,
+        <ForwardRef
+          to="/movie/undefined"
+        >
+          <Poster
+            imageBaseUrl="imageBaseUrl"
+            path="path"
+            size="size"
+            title="Title"
+          />
+        </ForwardRef>,
         <div
           className="c-card__body"
         >
           <header
             className="c-card__header"
           >
-            <h2
-              className="c-card__title"
+            <ForwardRef
+              className="c-card__link"
+              to="/movie/undefined"
             >
-              Title
-            </h2>
+              <h2
+                className="c-card__title"
+              >
+                Title
+              </h2>
+            </ForwardRef>
             <small
               className="c-card__date"
             >
@@ -63,16 +72,35 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "imageBaseUrl": "imageBaseUrl",
-          "path": "path",
-          "size": "size",
-          "title": "Title",
+          "children": <Poster
+            imageBaseUrl="imageBaseUrl"
+            path="path"
+            size="size"
+            title="Title"
+          />,
+          "to": "/movie/undefined",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "imageBaseUrl": "imageBaseUrl",
+            "path": "path",
+            "size": "size",
+            "title": "Title",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        },
       },
       Object {
         "instance": null,
@@ -83,11 +111,16 @@ ShallowWrapper {
             <header
               className="c-card__header"
             >
-              <h2
-                className="c-card__title"
+              <ForwardRef
+                className="c-card__link"
+                to="/movie/undefined"
               >
-                Title
-              </h2>
+                <h2
+                  className="c-card__title"
+                >
+                  Title
+                </h2>
+              </ForwardRef>
               <small
                 className="c-card__date"
               >
@@ -111,11 +144,16 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <h2
-                  className="c-card__title"
+                <ForwardRef
+                  className="c-card__link"
+                  to="/movie/undefined"
                 >
-                  Title
-                </h2>,
+                  <h2
+                    className="c-card__title"
+                  >
+                    Title
+                  </h2>
+                </ForwardRef>,
                 <small
                   className="c-card__date"
                 >
@@ -129,14 +167,33 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "host",
+                "nodeType": "function",
                 "props": Object {
-                  "children": "Title",
-                  "className": "c-card__title",
+                  "children": <h2
+                    className="c-card__title"
+                  >
+                    Title
+                  </h2>,
+                  "className": "c-card__link",
+                  "to": "/movie/undefined",
                 },
                 "ref": null,
-                "rendered": "Title",
-                "type": "h2",
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Title",
+                    "className": "c-card__title",
+                  },
+                  "ref": null,
+                  "rendered": "Title",
+                  "type": "h2",
+                },
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                },
               },
               Object {
                 "instance": null,
@@ -189,23 +246,32 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Poster
-            imageBaseUrl="imageBaseUrl"
-            path="path"
-            size="size"
-            title="Title"
-          />,
+          <ForwardRef
+            to="/movie/undefined"
+          >
+            <Poster
+              imageBaseUrl="imageBaseUrl"
+              path="path"
+              size="size"
+              title="Title"
+            />
+          </ForwardRef>,
           <div
             className="c-card__body"
           >
             <header
               className="c-card__header"
             >
-              <h2
-                className="c-card__title"
+              <ForwardRef
+                className="c-card__link"
+                to="/movie/undefined"
               >
-                Title
-              </h2>
+                <h2
+                  className="c-card__title"
+                >
+                  Title
+                </h2>
+              </ForwardRef>
               <small
                 className="c-card__date"
               >
@@ -227,16 +293,35 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "imageBaseUrl": "imageBaseUrl",
-            "path": "path",
-            "size": "size",
-            "title": "Title",
+            "children": <Poster
+              imageBaseUrl="imageBaseUrl"
+              path="path"
+              size="size"
+              title="Title"
+            />,
+            "to": "/movie/undefined",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "imageBaseUrl": "imageBaseUrl",
+              "path": "path",
+              "size": "size",
+              "title": "Title",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
         },
         Object {
           "instance": null,
@@ -247,11 +332,16 @@ ShallowWrapper {
               <header
                 className="c-card__header"
               >
-                <h2
-                  className="c-card__title"
+                <ForwardRef
+                  className="c-card__link"
+                  to="/movie/undefined"
                 >
-                  Title
-                </h2>
+                  <h2
+                    className="c-card__title"
+                  >
+                    Title
+                  </h2>
+                </ForwardRef>
                 <small
                   className="c-card__date"
                 >
@@ -275,11 +365,16 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <h2
-                    className="c-card__title"
+                  <ForwardRef
+                    className="c-card__link"
+                    to="/movie/undefined"
                   >
-                    Title
-                  </h2>,
+                    <h2
+                      className="c-card__title"
+                    >
+                      Title
+                    </h2>
+                  </ForwardRef>,
                   <small
                     className="c-card__date"
                   >
@@ -293,14 +388,33 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "host",
+                  "nodeType": "function",
                   "props": Object {
-                    "children": "Title",
-                    "className": "c-card__title",
+                    "children": <h2
+                      className="c-card__title"
+                    >
+                      Title
+                    </h2>,
+                    "className": "c-card__link",
+                    "to": "/movie/undefined",
                   },
                   "ref": null,
-                  "rendered": "Title",
-                  "type": "h2",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Title",
+                      "className": "c-card__title",
+                    },
+                    "ref": null,
+                    "rendered": "Title",
+                    "type": "h2",
+                  },
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "render": [Function],
+                  },
                 },
                 Object {
                   "instance": null,

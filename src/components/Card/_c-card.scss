@@ -28,3 +28,12 @@
 
   font-size: .85rem;
 }
+
+.c-card__link {
+  color: var(--btnBackground);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--btnHoverBackground);
+  }
+}

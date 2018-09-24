@@ -7,7 +7,8 @@ import { ResultsWrapper } from 'components/Results/ResultsWrapper';
 import { SearchBox } from 'components/SearchBox/SearchBox';
 import { Nav } from 'components/Nav/Nav';
 import { Router, navigate } from '@reach/router';
-import { home, search } from 'consts/routes';
+import { home, search, movie } from 'consts/routes';
+import { MovieWrapper } from 'components/Movie/MovieWrapper';
 import 'app/_app.scss';
 
 type State = {
@@ -114,7 +115,7 @@ export class App extends Component<void, State> {
   handleMovieSubmit = (event: SyntheticEvent<HTMLButtonElement>) => {
     event.preventDefault();
     const { searchTerms } = this.state;
-    navigate(`/search/${searchTerms}`);
+    navigate(`${search}${searchTerms}`);
     this.loadMovies();
   };
 
@@ -146,7 +147,8 @@ export class App extends Component<void, State> {
         <Nav resetSearchTerm={this.updateSearchTerms} />
         <Router>
           <ResultsWrapper path={home} popular />
-          <ResultsWrapper path={search} />
+          <ResultsWrapper path={`${search}:searchTerm`} />
+          <MovieWrapper path={`${movie}:movieId`} />
         </Router>
       </Provider>
     );

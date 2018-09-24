@@ -92,7 +92,8 @@
     "@reach/router": "^1.2.0",
     "immer": "^1.7.2",
     "normalize.css": "^8.0.0",
-    "react": "^16.5.2",
+    "react": "16.x",
+    "react-currency-formatter": "^1.1.0",
     "react-dom": "^16.5.2"
   }
 }

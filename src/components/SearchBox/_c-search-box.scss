@@ -1,9 +1,19 @@
 .c-search-box {
-  padding: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-bottom: 5vw;
 
   color: var(--searchText);
 
   background-color: var(--searchBackground);
+}
+
+.c-search-box__form {
+  max-width: 90vw;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .c-search-box__label {

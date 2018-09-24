@@ -1,12 +1,8 @@
 import { createContext } from 'react';
+import { searchContext } from '../../consts/searchContext';
 
 const SearchContext = createContext({
-  loading: true,
-  config: {},
-  searchTerms: '',
-  searchResults: {},
-  handleMovieSubmit() {},
-  handleSearchChange() {}
+  ...searchContext
 });
 
 export const { Provider, Consumer } = SearchContext;

@@ -1,20 +1,16 @@
-import React, { Component, Fragment } from 'react';
+// @flow
+
+import React, { Component } from 'react';
 import { Spinner } from '../Spinner/Spinner';
 import { Card } from '../Card/Card';
+import './_c-results.scss';
 
 export class Results extends Component {
   displayCards = () => {
     const { searchParams } = this.props,
-      { searchResults, config } = searchParams;
+      { searchResults, imageBaseUrl, lg } = searchParams;
 
-    let cards = null,
-      size = null,
-      imageBaseUrl = null;
-
-    if (config && config.images) {
-      imageBaseUrl = config.images.secure_base_url;
-      [size] = config.images.still_sizes;
-    }
+    let cards = null;
 
     if (searchResults && searchResults.results) {
       if (searchResults.results.length) {
@@ -28,7 +24,7 @@ export class Results extends Component {
               overview={overview}
               path={posterPath}
               imageBaseUrl={imageBaseUrl}
-              size={size}
+              size={lg}
             />
           );
         });
@@ -44,10 +40,10 @@ export class Results extends Component {
       cards = this.displayCards();
 
     return (
-      <Fragment>
+      <section className="c-results">
         {loading && <Spinner />}
-        {!loading && cards}
-      </Fragment>
+        {!loading && <div className="c-results__container">{cards}</div>}
+      </section>
     );
   }
 }

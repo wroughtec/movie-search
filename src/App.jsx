@@ -9,7 +9,11 @@ import { SearchBox } from './components/SearchBox/SearchBox';
 
 type State = {
   loading: boolean,
-  config: any,
+  imageBaseUrl: string,
+  sm: string,
+  md: string,
+  lg: string,
+  xl: string,
   searchTerms: string,
   searchResults: any
 };
@@ -19,7 +23,11 @@ export class App extends Component<void, State> {
 
     this.state = {
       loading: true,
-      config: {},
+      imageBaseUrl: '',
+      sm: '',
+      md: '',
+      lg: '',
+      xl: '',
       searchTerms: '',
       searchResults: {},
       handleSearchChange: this.handleSearchChange,
@@ -32,20 +40,35 @@ export class App extends Component<void, State> {
   }
 
   addConfigToState = async () => {
-    const config = await RequestMovies.config();
+    try {
+      const config = await RequestMovies.config();
 
-    this.setState(
-      produce(this.state, draft => {
-        draft.config = config;
-        draft.loading = false;
-      })
-    );
+      let sm, md, lg, xl, imageBaseUrl;
+
+      if (config && config.images) {
+        imageBaseUrl = config.images.secure_base_url;
+        [sm, md, lg, xl] = config.images.still_sizes;
+      }
+
+      this.setState(
+        produce(this.state, draft => {
+          draft.imageBaseUrl = imageBaseUrl;
+          draft.sm = sm;
+          draft.md = md;
+          draft.lg = lg;
+          draft.xl = xl;
+          draft.loading = false;
+        })
+      );
+    } catch (error) {
+      throw new Error(error);
+    }
   };
 
   handleSearchChange = (event: SyntheticEvent<HTMLButtonElement>) => {
     this.setState(
       produce(this.state, draft => {
-        draft.searchTerms = event.target.value;
+        draft.searchTerms = event.currentTarget.value;
       })
     );
   };
@@ -62,16 +85,20 @@ export class App extends Component<void, State> {
   };
 
   searchForMovies = async () => {
-    const { searchTerms } = this.state,
-      query = { query: searchTerms },
-      searchResults = await RequestMovies.searchMovies(query);
+    try {
+      const { searchTerms } = this.state,
+        query = { query: searchTerms },
+        searchResults = await RequestMovies.searchMovies(query);
 
-    this.setState(
-      produce(this.state, draft => {
-        draft.searchResults = searchResults;
-        draft.loading = false;
-      })
-    );
+      this.setState(
+        produce(this.state, draft => {
+          draft.searchResults = searchResults;
+          draft.loading = false;
+        })
+      );
+    } catch (error) {
+      throw new Error(error);
+    }
   };
 
   render() {

@@ -31,16 +31,31 @@ ShallowWrapper {
           size="size"
           title="Title"
         />,
-        <h2>
-          Title
-          <small>
-            releaseDate
-          </small>
-        </h2>,
-        <p>
-          overview
-        </p>,
+        <div
+          className="c-card__body"
+        >
+          <header
+            className="c-card__header"
+          >
+            <h2
+              className="c-card__title"
+            >
+              Title
+            </h2>
+            <small
+              className="c-card__date"
+            >
+              releaseDate
+            </small>
+          </header>
+          <p
+            className="c-card__overview"
+          >
+            overview
+          </p>
+        </div>,
       ],
+      "className": "c-card",
     },
     "ref": null,
     "rendered": Array [
@@ -64,42 +79,95 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Title",
-            <small>
-              releaseDate
-            </small>,
+            <header
+              className="c-card__header"
+            >
+              <h2
+                className="c-card__title"
+              >
+                Title
+              </h2>
+              <small
+                className="c-card__date"
+              >
+                releaseDate
+              </small>
+            </header>,
+            <p
+              className="c-card__overview"
+            >
+              overview
+            </p>,
           ],
+          "className": "c-card__body",
         },
         "ref": null,
         "rendered": Array [
-          "Title",
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "releaseDate",
+              "children": Array [
+                <h2
+                  className="c-card__title"
+                >
+                  Title
+                </h2>,
+                <small
+                  className="c-card__date"
+                >
+                  releaseDate
+                </small>,
+              ],
+              "className": "c-card__header",
             },
             "ref": null,
-            "rendered": "releaseDate",
-            "type": "small",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Title",
+                  "className": "c-card__title",
+                },
+                "ref": null,
+                "rendered": "Title",
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "releaseDate",
+                  "className": "c-card__date",
+                },
+                "ref": null,
+                "rendered": "releaseDate",
+                "type": "small",
+              },
+            ],
+            "type": "header",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "overview",
+              "className": "c-card__overview",
+            },
+            "ref": null,
+            "rendered": "overview",
+            "type": "p",
           },
         ],
-        "type": "h2",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "overview",
-        },
-        "ref": null,
-        "rendered": "overview",
-        "type": "p",
+        "type": "div",
       },
     ],
-    "type": "div",
+    "type": "article",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -114,16 +182,31 @@ ShallowWrapper {
             size="size"
             title="Title"
           />,
-          <h2>
-            Title
-            <small>
-              releaseDate
-            </small>
-          </h2>,
-          <p>
-            overview
-          </p>,
+          <div
+            className="c-card__body"
+          >
+            <header
+              className="c-card__header"
+            >
+              <h2
+                className="c-card__title"
+              >
+                Title
+              </h2>
+              <small
+                className="c-card__date"
+              >
+                releaseDate
+              </small>
+            </header>
+            <p
+              className="c-card__overview"
+            >
+              overview
+            </p>
+          </div>,
         ],
+        "className": "c-card",
       },
       "ref": null,
       "rendered": Array [
@@ -147,42 +230,95 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Title",
-              <small>
-                releaseDate
-              </small>,
+              <header
+                className="c-card__header"
+              >
+                <h2
+                  className="c-card__title"
+                >
+                  Title
+                </h2>
+                <small
+                  className="c-card__date"
+                >
+                  releaseDate
+                </small>
+              </header>,
+              <p
+                className="c-card__overview"
+              >
+                overview
+              </p>,
             ],
+            "className": "c-card__body",
           },
           "ref": null,
           "rendered": Array [
-            "Title",
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "releaseDate",
+                "children": Array [
+                  <h2
+                    className="c-card__title"
+                  >
+                    Title
+                  </h2>,
+                  <small
+                    className="c-card__date"
+                  >
+                    releaseDate
+                  </small>,
+                ],
+                "className": "c-card__header",
               },
               "ref": null,
-              "rendered": "releaseDate",
-              "type": "small",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Title",
+                    "className": "c-card__title",
+                  },
+                  "ref": null,
+                  "rendered": "Title",
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "releaseDate",
+                    "className": "c-card__date",
+                  },
+                  "ref": null,
+                  "rendered": "releaseDate",
+                  "type": "small",
+                },
+              ],
+              "type": "header",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "overview",
+                "className": "c-card__overview",
+              },
+              "ref": null,
+              "rendered": "overview",
+              "type": "p",
             },
           ],
-          "type": "h2",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "overview",
-          },
-          "ref": null,
-          "rendered": "overview",
-          "type": "p",
+          "type": "div",
         },
       ],
-      "type": "div",
+      "type": "article",
     },
   ],
   Symbol(enzyme.__options__): Object {

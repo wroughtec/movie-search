@@ -47,6 +47,8 @@ To run the tests
 
 ---
 ## TODOS
+- Add better error handling (create an error component)
+- Handle images (or lack thereof)
 - Add postCss tools to help deal with older browsers
 - Add search by genre
 - Colour code each genre
